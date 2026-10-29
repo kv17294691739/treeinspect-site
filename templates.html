@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample templates – Tree Inspect</title>
+<meta name="description" content="Download sample Excel templates for Tree Inspect: project template, SOR list, species catalogue and project import, with every column explained.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">🌳 Tree Inspect</a>
+    <nav><a href="./">Home</a><a href="guides.html">Guides</a><a href="templates.html">Templates</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <h1>Sample templates</h1>
+  <p class="lead">Excel files you can download, edit and import into Tree Inspect. Each one shows what the sheets look like and what every column means.</p>
+  <nav class="toc" aria-label="On this page"><strong>Downloads</strong><ol>
+  <li><a href="#project-template">Project template</a> – data fields, export settings and SOR</li>
+  <li><a href="#sor">SOR list</a> – schedule of rates for quoting <span class="tag-pro">PRO</span></li>
+  <li><a href="#species">Species catalogue</a> – common and scientific names</li>
+  <li><a href="#project-import">Project import</a> – a whole project with tree data <span class="tag-pro">PRO</span></li>
+  </ol></nav>
+  <div class="tip">The files open in Excel, Google Sheets, LibreOffice or Numbers. Keep the sheet layout, change the content, then import the file on your phone (save it to Files or Drive first). All names and prices in the samples are made up. The app’s import screens also have their own <strong>Download sample</strong> button.</div>
+  <p class="meta">The pictures below are screenshots of the sample files open in LibreOffice Calc.</p>
+
+  <h2 id="project-template">1. Project template</h2>
+  <p><a class="btn-dl" href="downloads/TreeInspect_project_template_sample.xlsx" download>⬇ Download project template sample</a> <span class="meta">TreeInspect_project_template_sample.xlsx · 8.7 KB</span></p>
+  <p>A survey form with 10 fields (within the Free limit), two Excel export orders and an 8-item SOR list. <strong>Import:</strong> Projects › Project templates › <em>Import templates</em> › Choose file. In <em>Match template sheets</em> choose Fields = Data fields, Export settings = Export settings, SOR = SOR and Read me = Ignore. The template is named after the file. See <a href="guide-templates.html#import">Templates and fields</a>.</p>
+  <h3>Sheet “Fields” (required)</h3>
+  <figure class="sheet"><img src="images/templates/project-template-sample-1.webp" width="1400" height="232" loading="lazy" alt="Fields sheet: titles in row 1, field types in row 2, options below."><figcaption>Fields sheet: titles in row 1, field types in row 2, options below.</figcaption></figure>
+  <div class="table-scroll"><table><tr><th>Part</th><th>What goes there</th></tr><tr><td>Row 1 – title</td><td>The field name shown on the tree form and used as the Excel column title, e.g. <em>Height (m)</em>. One field per column.</td></tr><tr><td>Row 2 – type</td><td><code>text</code>, <code>number</code>, <code>dropdown</code>, <code>multidropdown</code>, <code>checkbox</code>, <code>checklist</code>, <code>date</code> or <code>gps</code> (location). Capitals and spaces are ignored.</td></tr><tr><td>Row 3 onwards – options</td><td>For dropdown, multi dropdown and checklist fields: one option per row. The list ends at the first empty cell. Leave blank for other types.</td></tr><tr><td><code>{{num}}</code> in an option</td><td>Becomes a number box on the tree form, e.g. <em>Reduce crown by approximately {{num}}m all over</em>.</td></tr></table></div>
+  <p>The sample’s columns:</p>
+  <div class="table-scroll"><table><tr><th>Column</th><th>Type</th><th>Meaning / options</th></tr><tr><td>Height (m)</td><td>number</td><td>Tree height in metres.</td></tr><tr><td>Stem diameter DBH (mm)</td><td>number</td><td>Stem diameter at breast height in millimetres.</td></tr><tr><td>Age class</td><td>dropdown</td><td>Young, Early-mature, Mature, Over-mature, Veteran.</td></tr><tr><td>Physio condition</td><td>dropdown</td><td>Physiological condition: Good, Fair, Poor, Dead.</td></tr><tr><td>Structural condition</td><td>dropdown</td><td>Structural condition: Good, Fair, Poor, Dead.</td></tr><tr><td>Observations</td><td>text</td><td>Free-text notes.</td></tr><tr><td>Recommendations</td><td>checklist</td><td>Tick any: No action required; Remove major deadwood; Lift crown to give {{num}}m clearance over footpath; Reduce crown by approximately {{num}}m all over; Fell to ground level and treat stump; Sever and clear ivy from the stem.</td></tr><tr><td>Work priority</td><td>dropdown</td><td>Immediate, High, Medium, Low, None.</td></tr><tr><td>Re-inspect period</td><td>dropdown</td><td>6 months, 12 months, 18 months, 3 years, 5 years.</td></tr><tr><td>Location</td><td>gps</td><td>Latitude and longitude, with a Use current GPS button.</td></tr></table></div>
+  <p>Tree ID, tree species and inspection date are always added by the app, so they are not listed in this sheet.</p>
+  <h3>Sheet “Export settings” (optional)</h3>
+  <figure class="sheet"><img src="images/templates/project-template-sample-2.webp" width="773" height="551" loading="lazy" alt="Export settings sheet: one Excel column order per column."><figcaption>Export settings sheet: one Excel column order per column.</figcaption></figure>
+  <div class="table-scroll"><table><tr><th>Part</th><th>Meaning</th></tr><tr><td>Row 1</td><td>The name of the export order. The first column becomes the default.</td></tr><tr><td>Rows below</td><td>The columns to export, top to bottom in order. Use a field title from the Fields sheet, or <em>ID</em>, <em>Species</em>, <em>Inspection date</em>, <em>Project</em>, <em>Project ID</em>, <em>Client</em>, <em>Address</em>, an SOR column title or <em>Price</em>. Names the app does not recognise are skipped.</td></tr><tr><td>Default (sample)</td><td>A full survey: ID, species, date and every field.</td></tr><tr><td>Works schedule (sample)</td><td>ID, Species, Recommendations, Work priority, and the SOR Code, Description and Price.</td></tr></table></div>
+  <h3>Sheet “SOR” (optional) <span class="tag-pro">PRO</span></h3>
+  <figure class="sheet"><img src="images/templates/project-template-sample-3.webp" width="996" height="374" loading="lazy" alt="SOR sheet: one schedule-of-rates item per row."><figcaption>SOR sheet: one schedule-of-rates item per row.</figcaption></figure>
+  <p>Same columns as the <a href="#sor">SOR list sample</a>. It is saved as an SOR structure named after the sheet, and the template’s quoting method is set to SOR. Quoting needs Pro.</p>
+  <h3>Sheet “Read me”</h3>
+  <figure class="sheet"><img src="images/templates/project-template-sample-4.webp" width="1400" height="826" loading="lazy" alt="Read me sheet with the import steps. Set it to Ignore when importing."><figcaption>Read me sheet with the import steps. Set it to Ignore when importing.</figcaption></figure>
+
+  <h2 id="sor">2. SOR (schedule of rates) list <span class="tag-pro">PRO</span></h2>
+  <p><a class="btn-dl" href="downloads/TreeInspect_SOR_list_sample.xlsx" download>⬇ Download SOR list sample</a> <span class="meta">TreeInspect_SOR_list_sample.xlsx · 6.3 KB</span></p>
+  <p>Eight sample work items with prices. <strong>Import:</strong> open a project › Project settings › set the quoting method to SOR › <em>Import spreadsheet</em>, then choose the <em>SOR rates</em> sheet if asked. Importing replaces the project’s current SOR list. See <a href="guide-project-settings.html#sor-import">Project settings and SOR</a>.</p>
+  <figure class="sheet"><img src="images/templates/sor-list-sample-1.webp" width="996" height="374" loading="lazy" alt="SOR rates sheet."><figcaption>SOR rates sheet.</figcaption></figure>
+  <div class="table-scroll"><table><tr><th>Column</th><th>What it means</th></tr><tr><td>Code</td><td>A short item code, e.g. TW01. The first column is shown as the code on the tree form.</td></tr><tr><td>Category</td><td>A group for the item, e.g. Pruning, Felling, Stumps.</td></tr><tr><td>Description</td><td>The work, e.g. <em>Crown lift to 5m</em>. Shown under the code on the tree form.</td></tr><tr><td>Unit</td><td>How the item is counted, e.g. Per tree, Per stump, Per load.</td></tr><tr><td>Price</td><td>The unit price used for quoting. Exactly one column title must contain the word “Price”. 85, 85.00 and £85 all work.</td></tr></table></div>
+  <p>You can rename, add or remove the other columns; each becomes a field on every SOR item. Files must be .xlsx or .csv.</p>
+  <figure class="sheet"><img src="images/templates/sor-list-sample-2.webp" width="1400" height="373" loading="lazy" alt="Read me sheet."><figcaption>Read me sheet.</figcaption></figure>
+
+  <h2 id="species">3. Species catalogue</h2>
+  <p><a class="btn-dl" href="downloads/TreeInspect_species_catalogue_sample.xlsx" download>⬇ Download species catalogue sample</a> <span class="meta">TreeInspect_species_catalogue_sample.xlsx · 6.1 KB</span></p>
+  <p>Sixteen common UK species. <strong>Import:</strong> Projects › Species catalogue › <em>Import from Excel</em>, then choose the <em>Species</em> sheet. Species already in your catalogue are not added twice. Many of these are in the built-in list already, so use the file as a pattern for your own species. See <a href="guide-catalogue.html">Species catalogue</a>.</p>
+  <figure class="sheet"><img src="images/templates/species-catalogue-sample-1.webp" width="747" height="657" loading="lazy" alt="Species sheet."><figcaption>Species sheet.</figcaption></figure>
+  <div class="table-scroll"><table><tr><th>Column</th><th>What it means</th></tr><tr><td>A – Common name</td><td>The everyday name, e.g. <em>English oak</em>. One species per row. A header row is skipped.</td></tr><tr><td>B – Scientific name</td><td>The botanical name, e.g. <em>Quercus robur</em>. Optional. Shown in italics in the app and in exports.</td></tr></table></div>
+  <figure class="sheet"><img src="images/templates/species-catalogue-sample-2.webp" width="1400" height="218" loading="lazy" alt="Read me sheet."><figcaption>Read me sheet.</figcaption></figure>
+
+  <h2 id="project-import">4. Project import <span class="tag-pro">PRO</span></h2>
+  <p><a class="btn-dl" href="downloads/TreeInspect_project_import_sample.xlsx" download>⬇ Download project import sample</a> <span class="meta">TreeInspect_project_import_sample.xlsx · 8.0 KB</span></p>
+  <p>Creates a whole project with five trees. Creating a project from a spreadsheet needs Pro. <strong>Import:</strong> Projects › <em>Import backup</em> › Choose file. In <em>Match sheets</em> choose Tree data = Tree data, Fields = Field structure, Read me = Ignore, then enter a project name. See <a href="guide-import-export.html#import-project">Import, export and backups</a>.</p>
+  <h3>Sheet “Tree data”</h3>
+  <figure class="sheet"><img src="images/templates/project-import-sample-1.webp" width="1400" height="162" loading="lazy" alt="Tree data sheet: one tree per row. Two rows have no ID and one has no date."><figcaption>Tree data sheet: one tree per row. Two rows have no ID and one has no date.</figcaption></figure>
+  <div class="table-scroll"><table><tr><th>Column</th><th>What it means</th></tr><tr><td>ID</td><td>The tree ID, e.g. T-001. Also recognised as <em>Tree ID</em> or <em>Tag</em>. Optional: blank IDs are numbered automatically.</td></tr><tr><td>Tree species</td><td>The species, e.g. <em>English oak (Quercus robur)</em>. Also recognised as <em>Species</em>.</td></tr><tr><td>Inspection date</td><td>Also recognised as <em>Date</em>. Optional: a blank date uses the import date. Write dates as text, e.g. 2026-09-14.</td></tr><tr><td>Height (m) … Re-inspect period</td><td>Every other column is stored under the field with the same title in the Fields sheet. Dropdown values should match an option; checklist values use the option text.</td></tr></table></div>
+  <h3>Sheet “Fields”</h3>
+  <figure class="sheet"><img src="images/templates/project-import-sample-2.webp" width="1400" height="232" loading="lazy" alt="Fields sheet: the same layout as the project template."><figcaption>Fields sheet: the same layout as the project template.</figcaption></figure>
+  <p>Same format as the <a href="#project-template">project template Fields sheet</a>: row 1 titles, row 2 types, options below.</p>
+  <figure class="sheet"><img src="images/templates/project-import-sample-3.webp" width="1400" height="502" loading="lazy" alt="Read me sheet."><figcaption>Read me sheet.</figcaption></figure>
+  <p class="meta">Free version limits apply to imported templates: the first 10 custom fields and the first 8 options per list are kept. See <a href="guide-pro.html">Pro and Free limits</a>.</p>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><a href="guides.html">User guides</a><a href="templates.html">Sample templates</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:kv17294691739@gmail.com">Contact</a></p>
+    <p>Tree Inspect is published by Moving Tree Ltd, a company registered in England and Wales. Registered office: 82A James Carter Road, Mildenhall, IP28 7DE, United Kingdom.</p>
+    <p>© 2026 Moving Tree Ltd</p>
+  </div>
+</footer>
+</body>
+</html>

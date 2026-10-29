@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tree list – Tree Inspect</title>
+<meta name="description" content="Search, sort, filter, expand, duplicate and delete trees, and fill numbering gaps.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">🌳 Tree Inspect</a>
+    <nav><a href="./">Home</a><a href="guides.html">Guides</a><a href="templates.html">Templates</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumbs"><a href="guides.html">User guides</a> › Tree list</p>
+  <h1>Tree list</h1>
+  <p class="lead">Search, sort, filter, expand, duplicate and delete trees, and fill numbering gaps.</p>
+  <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#header">Project header and summary</a></li><li><a href="#toolbar">Toolbar</a></li><li><a href="#search">Search, sort and filter</a></li><li><a href="#row">Each tree row</a></li><li><a href="#duplicate">Duplicate a tree</a></li><li><a href="#delete">Delete, Fill gap and Undo</a></li></ol></nav>
+
+<p>Open a project to see its <strong>tree list</strong>. Every tree, group or other item in the project is one row.</p>
+<div class="shots"><figure class="phone"><img src="images/guide/treelist-empty.webp" width="585" height="1266" loading="lazy" alt="A new project with no trees yet."><figcaption>A new project with no trees yet.</figcaption></figure><figure class="phone"><img src="images/guide/treelist-final.webp" width="585" height="1266" loading="lazy" alt="A project with four items. The summary card counts items, groups, pins and photos."><figcaption>A project with four items. The summary card counts items, groups, pins and photos.</figcaption></figure><figure class="phone"><img src="images/guide/treelist-expanded.webp" width="585" height="1266" loading="lazy" alt="Expand all shows the key field values under each tree."><figcaption>Expand all shows the key field values under each tree.</figcaption></figure></div>
+<h2 id="header">Project header and summary</h2>
+<p>The top of the list shows the project ID, client, address, attached map and the <strong>total price</strong> of all quotes. Under the search box, the summary card counts items, groups, trees on the map and trees with photos, and lists how many of each species there are.</p>
+<h2 id="toolbar">Toolbar</h2>
+<table><tr><th>Button</th><th>What it does</th></tr>
+<tr><td>Archive</td><td>Moves the project into Archives on this phone (Full or Simple). See <a href="guide-import-export.html#archive">Archive</a>.</td></tr>
+<tr><td>Export</td><td>Excel, quote, maps, photos and full export. See <a href="guide-import-export.html#export">Export</a>.</td></tr>
+<tr><td>Project map</td><td>All pinned trees on the site plan. See <a href="guide-map.html">Map and pins</a>.</td></tr>
+<tr><td>Project settings</td><td>Project details, map, fields, quoting and export settings. See <a href="guide-project-settings.html">Project settings</a>.</td></tr>
+<tr><td>Quick guide / App options</td><td>Help for this screen and app-wide options.</td></tr>
+</table>
+<h2 id="search">Search, sort and filter</h2>
+<ul class="points">
+<li><strong>Search</strong> finds a tree by tag (ID) or species.</li>
+<li><strong>Sort</strong> (the lines icon) orders the list by Tree ID, Species, On map first, or by fields you have marked for filtering, such as Work priority or condition.</li>
+<li><strong>Filters</strong> (the funnel icon) narrows the list by type, species, on map, photos and your filter fields. Choose which fields appear here with the filter icon on each field in <a href="guide-templates.html#filter-list">the data structure</a>.</li>
+<li><kbd>Select all</kbd> and <kbd>Clear</kbd> tick or untick the trees shown; <kbd>Expand all</kbd> opens every row.</li>
+</ul>
+<div class="shots"><figure class="phone"><img src="images/guide/sort-menu.webp" width="585" height="1266" loading="lazy" alt="Sort options include your filter fields."><figcaption>Sort options include your filter fields.</figcaption></figure></div>
+<h2 id="row">Each tree row</h2>
+<p>A row shows the ID, the species (scientific name in italics), and a line such as <em>1 photo(s) | on map | £130.00</em>. Tap the row to open the <a href="guide-tree-form.html">tree form</a>. The icons on the right are:</p>
+<ul class="points">
+<li><strong>Show details</strong> – expand the row to see more values.</li>
+<li><strong>Duplicate</strong> – make a copy of the tree (see below).</li>
+<li><strong>Map</strong> – open the map to place or move this tree’s pin.</li>
+<li><strong>Delete</strong> – delete the tree.</li>
+</ul>
+<h2 id="duplicate">Duplicate a tree</h2>
+<p>Duplicate copies the tree’s field values, its pin (placed slightly offset so you can drag it), its quote and SOR lines. The copy gets the next free ID number (keeping any manual text) and today’s date, and its form opens so you can change what differs. Photos are not copied.</p>
+<h2 id="delete">Delete, Fill gap and Undo</h2>
+<ol class="steps">
+<li>Tap the bin icon and confirm <kbd>Delete</kbd>.</li>
+<li>If deleting leaves a gap in the numbering (for example T-002 is deleted but T-003 exists), the app asks <em>Fill the gap?</em>
+<ul><li><kbd>Fill gap</kbd> moves later numbers down so the number is reused (T-003 becomes T-002, and so on).</li>
+<li><kbd>Keep numbers</kbd> leaves the other IDs unchanged.</li></ul></li>
+<li>A bar at the bottom says <em>Deleted T-002</em>. Tap <kbd>Undo</kbd> straight away to bring the tree back.</li>
+</ol>
+<div class="shots"><figure class="phone"><img src="images/guide/delete-confirm.webp" width="585" height="1266" loading="lazy" alt="Confirm the delete."><figcaption>Confirm the delete.</figcaption></figure><figure class="phone"><img src="images/guide/fill-gap.webp" width="585" height="1266" loading="lazy" alt="Fill the gap? Choose Keep numbers or Fill gap."><figcaption>Fill the gap? Choose Keep numbers or Fill gap.</figcaption></figure><figure class="phone"><img src="images/guide/after-fill-gap.webp" width="585" height="1266" loading="lazy" alt="After Fill gap: G-003 became G-002 and T-004 became T-003. Undo is offered at the bottom."><figcaption>After Fill gap: G-003 became G-002 and T-004 became T-003. Undo is offered at the bottom.</figcaption></figure></div>
+
+  <p class="meta">Screenshots use made-up sample data. Pictures marked “Illustration” are drawn to show a screen and may differ from your phone.</p>
+  <div class="pager"><span>← <a href="guide-projects.html">Projects and folders</a></span><span><a href="guides.html">All guides</a></span><span><a href="guide-tree-form.html">Tree form</a> →</span></div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><a href="guides.html">User guides</a><a href="templates.html">Sample templates</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:kv17294691739@gmail.com">Contact</a></p>
+    <p>Tree Inspect is published by Moving Tree Ltd, a company registered in England and Wales. Registered office: 82A James Carter Road, Mildenhall, IP28 7DE, United Kingdom.</p>
+    <p>© 2026 Moving Tree Ltd</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tree form – Tree Inspect</title>
+<meta name="description" content="Item type, ID numbering and manual text, species, dropdowns with Other, checklists, quotes and saving.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="./">🌳 Tree Inspect</a>
+    <nav><a href="./">Home</a><a href="guides.html">Guides</a><a href="templates.html">Templates</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="crumbs"><a href="guides.html">User guides</a> › Tree form</p>
+  <h1>Tree form</h1>
+  <p class="lead">Item type, ID numbering and manual text, species, dropdowns with Other, checklists, quotes and saving.</p>
+  <nav class="toc" aria-label="On this page"><strong>On this page</strong><ol><li><a href="#ids">Item type, ID number and manual text</a></li><li><a href="#species">Tree species</a></li><li><a href="#date">Inspection date</a></li><li><a href="#fields">Field types on the form</a></li><li><a href="#quote">Quote PRO</a></li><li><a href="#photos">Photos</a></li><li><a href="#save">Saving</a></li></ol></nav>
+
+<p>The tree form records one item. Tap <kbd>+ Add Tree</kbd> on the tree list for a blank form, or tap an existing row to edit it. The fields come from the project’s <a href="guide-templates.html">data structure</a>.</p>
+<div class="shots"><figure class="phone"><img src="images/guide/tree-form-new.webp" width="585" height="1266" loading="lazy" alt="A blank Add Tree form. The ID is filled in for you."><figcaption>A blank Add Tree form. The ID is filled in for you.</figcaption></figure><figure class="phone"><img src="images/guide/tree-form-mapped.webp" width="585" height="1266" loading="lazy" alt="A completed form, marked on the project map."><figcaption>A completed form, marked on the project map.</figcaption></figure></div>
+<h2 id="ids">Item type, ID number and manual text</h2>
+<ul class="points">
+<li><strong>Item type</strong>: Tree, Group or Other. The type sets the ID prefix (for example <code>T-</code> for trees and <code>G-</code> for groups; Other uses its own prefix).</li>
+<li><strong>ID number</strong> is filled in automatically with the next free number. You can type a different number.</li>
+<li><strong>Manual text</strong> adds your own text to the ID, for example an existing tag number such as <code>(897)</code>.</li>
+<li>The prefixes, number width (for example 3 gives <code>T-001</code>) and numbering style are set in <a href="guide-project-settings.html#details">Project settings</a>:
+<ul><li><strong>Continued</strong> – one sequence for every type: T1, T2, G3, O4.</li>
+<li><strong>Separated</strong> – each type counts on its own: T1, T2 / G1 / O1.</li></ul></li>
+</ul>
+<div class="shots"><figure class="phone"><img src="images/guide/numbering-menu.webp" width="585" height="1266" loading="lazy" alt="Numbering style in project settings."><figcaption>Numbering style in project settings.</figcaption></figure></div>
+<h2 id="species">Tree species</h2>
+<ol class="steps">
+<li>Start typing a common name (or a scientific name in the second box).</li>
+<li>Pick a suggestion from the <a href="guide-catalogue.html">species catalogue</a>. Both names are filled in, and the scientific name is shown in italics automatically.</li>
+<li>If the species is not in the catalogue, type both names yourself. The new species is added to the catalogue when you save the tree.</li>
+</ol>
+<div class="shots"><figure class="phone"><img src="images/guide/species-search.webp" width="585" height="1266" loading="lazy" alt="Suggestions appear as you type."><figcaption>Suggestions appear as you type.</figcaption></figure><figure class="phone"><img src="images/guide/species-filled.webp" width="585" height="1266" loading="lazy" alt="Common and scientific name filled in."><figcaption>Common and scientific name filled in.</figcaption></figure></div>
+<h2 id="date">Inspection date</h2>
+<p>Every tree has an inspection date, which is set to today on a new tree. Tap it to choose another date.</p>
+<h2 id="fields">Field types on the form</h2>
+<table><tr><th>Type</th><th>How it works on the form</th></tr>
+<tr><td>Text</td><td>Free text, such as observations.</td></tr>
+<tr><td>Number</td><td>A number box, such as height or stem diameter.</td></tr>
+<tr><td>Dropdown</td><td>Pick one option. <em>— None —</em> clears it, and <em>Other (type here)</em> lets you type something that is not in the list.</td></tr>
+<tr><td>Multi dropdown</td><td>Several dropdowns for the same field. Use <kbd>Add dropdown</kbd> to add another.</td></tr>
+<tr><td>Checkbox</td><td>A single yes/no tick.</td></tr>
+<tr><td>Checklist</td><td>Tick any number of options. Ticked options move to the top. Options can include number boxes.</td></tr>
+<tr><td>Date</td><td>A date picker.</td></tr>
+<tr><td>Location (GPS)</td><td>Latitude and longitude, typed or captured with the GPS button. See <a href="guide-gps.html">GPS</a>.</td></tr>
+</table>
+<h3 id="other">Dropdowns with “Other”</h3>
+<p>Choose <em>Other (type here)</em> and a text box appears. Type the value, for example <em>Fair, old bark wound at 2m</em>. Use <kbd>Add other</kbd> to add more typed values, and the remove icon to delete one.</p>
+<div class="shots"><figure class="phone"><img src="images/guide/dropdown-open.webp" width="585" height="1266" loading="lazy" alt="A dropdown with — None — and Other (type here)."><figcaption>A dropdown with — None — and Other (type here).</figcaption></figure><figure class="phone"><img src="images/guide/dropdown-other.webp" width="585" height="1266" loading="lazy" alt="Other selected, with a typed value."><figcaption>Other selected, with a typed value.</figcaption></figure></div>
+<h3 id="checklists">Checklists and number boxes</h3>
+<p>Checklist options written with <code>{num}</code> in the template show a small number box in the sentence, for example <em>Reduce crown by approximately [3]m all over</em>. Type the number after ticking the option. When the tree is exported, the numbers are written into the sentence.</p>
+<div class="shots"><figure class="phone"><img src="images/guide/checklist-num.webp" width="585" height="1266" loading="lazy" alt="Ticked checklist items with number boxes filled in."><figcaption>Ticked checklist items with number boxes filled in.</figcaption></figure></div>
+<h2 id="quote">Quote <span class="tag-pro">PRO</span></h2>
+<p>Quoting is a Pro feature. Each tree can use one of three methods (the project default is set in <a href="guide-project-settings.html#quoting">Project settings</a>):</p>
+<ul class="points">
+<li><strong>Fixed price</strong> – type a price.</li>
+<li><strong>Labour</strong> – staff × hours × the hourly rate.</li>
+<li><strong>SOR (schedule of rates)</strong> – tick items from the project’s SOR list, and set a quantity for each. Search the list with <em>Filter SOR items</em>.</li>
+</ul>
+<p>All methods allow an <strong>Additional charge</strong> and <strong>Quote notes</strong>. The <strong>Final price</strong> is worked out for you and added to the project total.</p>
+<div class="shots"><figure class="phone"><img src="images/guide/quote-sor.webp" width="585" height="1266" loading="lazy" alt="SOR quote: TW01 and TW07 ticked, quote price £130.00."><figcaption>SOR quote: TW01 and TW07 ticked, quote price £130.00.</figcaption></figure></div>
+<h2 id="photos">Photos</h2>
+<p>Tap <kbd>Add photo</kbd> at the bottom of the form. See <a href="guide-photos.html">Photos and annotation</a>.</p>
+<h2 id="save">Saving</h2>
+<p>Tap <kbd>Save tree</kbd> (at the bottom, or the save icon at the top). Backing out of the form also saves the tree.</p>
+<div class="tip">Wrap text in <code>&lt;i&gt;</code> and <code>&lt;/i&gt;</code> to make it italic in a text field.</div>
+
+  <p class="meta">Screenshots use made-up sample data. Pictures marked “Illustration” are drawn to show a screen and may differ from your phone.</p>
+  <div class="pager"><span>← <a href="guide-tree-list.html">Tree list</a></span><span><a href="guides.html">All guides</a></span><span><a href="guide-map.html">Map, pins and drawing tools</a> →</span></div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <p><a href="guides.html">User guides</a><a href="templates.html">Sample templates</a><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:kv17294691739@gmail.com">Contact</a></p>
+    <p>Tree Inspect is published by Moving Tree Ltd, a company registered in England and Wales. Registered office: 82A James Carter Road, Mildenhall, IP28 7DE, United Kingdom.</p>
+    <p>© 2026 Moving Tree Ltd</p>
+  </div>
+</footer>
+</body>
+</html>
