@@ -12,32 +12,28 @@ No build step, no scripts, no trackers – just plain HTML and one CSS file.
 
 Live at https://movingtree.download/ (custom domain; set in Settings → Pages). Before DNS is set up, https://kv17294691739.github.io/treeinspect-site/ redirects there.
 
-## 1. Fill in the placeholders
+## 1. Company details
 
-Placeholders are in square brackets and appear on all three pages (footer and contact sections):
+The pages show **Moving Tree Ltd**, registered office **82A James Carter Road, Mildenhall, IP28 7DE, United Kingdom** (in the footer of all three pages, section 1 and section 15 of `privacy.html`, and the intro and section 14 of `terms.html`).
 
-| Placeholder | Replace with |
-| --- | --- |
-| `[Company Name]` | Company name exactly as on the Companies House certificate, **without** "Ltd" (the pages already add " Ltd"). If your name ends in "Limited", change the text after it too. |
-| `[Company number]` | The 8-digit company number from the certificate |
-| `[Registered office address]` | The company's registered office. This is public on Companies House anyway – use a registered-office / virtual-office service or your accountant's address if you don't want your home address shown. |
+### Add the company number later
+The company is still being registered, so the number is not shown yet. When Companies House issues it, add ` (company number 12345678)` straight after "a company registered in England and Wales" in these places:
+- the footer of `index.html`, `privacy.html` and `terms.html`
+- section 1 of `privacy.html`
+
+Or on a computer with git:
+```bash
+sed -i 's/a company registered in England and Wales/a company registered in England and Wales (company number 12345678)/g' *.html
+```
+(On a Mac use `sed -i ''`.) Then commit and push. Each page has a comment near the top as a reminder.
 
 Also check:
-- **Contact email** – currently `kv17294691739@gmail.com` (the address in the existing privacy policy). Once you have the domain, a domain address such as `support@movingtree.download` looks more professional. Find/replace it on all pages.
+- **Contact email** – currently `kv17294691739@gmail.com`. A domain address such as `support@movingtree.download` looks more professional. Find/replace it on all pages.
 - **Store badges** – `index.html` says "App Store – coming soon" / "Google Play – coming soon". Replace with real links when the listings are public.
 - **"Last updated"** dates at the top of `privacy.html` and `terms.html` whenever you change them.
 
-### Easiest way: edit on GitHub (works from a phone)
+### Editing from a phone
 Open the file on github.com → pencil icon (Edit) → change the text → **Commit changes**. The site updates in about a minute.
-
-### Replace everything at once (on a computer with git)
-```bash
-git clone https://github.com/kv17294691739/treeinspect-site.git
-cd treeinspect-site
-sed -i 's/\[Company Name\]/Acme Trees/g; s/\[Company number\]/12345678/g; s/\[Registered office address\]/1 Example Street, London, AB1 2CD/g' *.html
-git commit -am "Fill in company details" && git push
-```
-(On a Mac use `sed -i ''` instead of `sed -i`.)
 
 ## 2. Add your custom domain
 
