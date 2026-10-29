@@ -25,7 +25,7 @@
   <p class="meta">Last updated: 29 October 2026</p>
 
   <div class="card">
-    <p style="margin-top:0"><strong>Short version.</strong> Tree Inspect works offline. Your projects, photos, maps and GPS readings are stored on your device and are never sent to us. We have no Tree Inspect account and no server that receives your survey data. The free version shows adverts from Google AdMob, which collects some device data as described in <a href="#ads">section 5</a>. Payments are handled by Apple or Google.</p>
+    <p style="margin-top:0"><strong>Short version.</strong> Tree Inspect works offline. Your projects, photos, maps and GPS readings are stored on your device and are never sent to us. We have no Tree Inspect account and no server that receives your survey data. The free version shows adverts from Google AdMob, which collects some device data as described in <a href="#ads">section 5</a>. Where the law requires it (for example in the UK and EEA) the app asks for your consent first, and you can change your choice at any time in the app. Payments are handled by Apple or Google.</p>
   </div>
 
   <h2>1. Who we are</h2>
@@ -37,7 +37,7 @@
   <ul>
     <li><strong>Survey content:</strong> project names, client names, site addresses, custom field values, notes, recommendations, quotes, tree IDs, species catalogue entries and templates.</li>
     <li><strong>Photos and site maps:</strong> photos you take with the camera or choose from your library, with any captions and annotations, and site-plan images you attach.</li>
-    <li><strong>Precise location:</strong> latitude and longitude, read only when you tap the GPS control on a Location field. The app does not track your location in the background and does not build a location history.</li>
+    <li><strong>Precise location:</strong> latitude and longitude, read only when you tap the GPS control on a Location field, and saved with that tree in your survey on your device. The app does not track your location in the background, does not build a location history, and does not send your GPS readings to us or to any advertising partner.</li>
     <li><strong>App settings:</strong> display and export options, and your Free/Pro status (including subscription expiry and the date of the last successful store check).</li>
   </ul>
   <p>We do not use your survey content, photos or location for advertising, analytics or any purpose other than providing the app’s features.</p>
@@ -48,11 +48,15 @@
     <tr><th>Permission</th><th>When it is used</th><th>If you refuse</th></tr>
     <tr><td>Camera</td><td>When you choose to take a photo of a tree or a map.</td><td>You can still attach an existing photo.</td></tr>
     <tr><td>Photos / files</td><td>Attaching photos and maps, saving marked-up photos, importing and exporting files.</td><td>Those attach, save and import actions are unavailable.</td></tr>
-    <tr><td>Location (precise)</td><td>Only when you tap the GPS control on a Location field.</td><td>You can still type an address and pin trees on the map image.</td></tr>
+    <tr><td>Location (precise, “while using the app” only)</td><td>Only when you tap the GPS control on a Location field. The first time, the app explains why before your phone asks for permission.</td><td>You can still type an address and pin trees on the map image. If you refuse, the app offers a shortcut to your phone’s Settings in case you change your mind.</td></tr>
+    <tr><td>Tracking (iOS only, free version)</td><td>Asked once, after the advert consent message, only if adverts can be shown. It lets Google use your device’s advertising identifier (IDFA) for more relevant adverts.</td><td>You still see adverts, but they are not personalised using the IDFA.</td></tr>
     <tr><td>Internet</td><td>Store purchases and subscription checks, adverts in the free version, and a short check of whether the device is online.</td><td>Survey work continues offline.</td></tr>
   </table>
   </div>
   <p>You can withdraw any permission at any time in your device’s Settings.</p>
+
+  <h3 id="gps">How the GPS feature works</h3>
+  <p>The first time you tap the GPS control, Tree Inspect shows a short explanation before your phone’s own permission prompt: location is used only to record where the tree is, the position is stored on your device with your survey, and it is not shared. The app remembers that you have seen this explanation. After that, your device’s permission setting decides whether GPS can be used. Location is read once per tap; the app does not request background (“always”) location.</p>
 
   <h2>4. Data that leaves your device</h2>
   <ul>
@@ -65,7 +69,12 @@
   <h2 id="ads">5. Advertising (free version only)</h2>
   <p>The free version of Tree Inspect shows a banner advert and may show an advert before some exports. These adverts are provided by Google AdMob (Google Ireland Limited / Google LLC). Tree Inspect Pro removes them.</p>
   <p>When adverts are shown, the Google Mobile Ads SDK may collect and process data such as your IP address, approximate location derived from the IP address, device and operating-system information, advertising identifiers (for example the Android Advertising ID), and information about adverts shown and tapped. Google uses this data to deliver adverts, measure them, prevent fraud and, where permitted, personalise them. Your survey content, photos and GPS readings are never shared with the advertising SDK.</p>
-  <p>You can reset or delete your Android Advertising ID, or opt out of ads personalisation, in your device settings (Android: Settings › Google › Ads / Privacy › Ads; iOS: Settings › Privacy &amp; Security › Tracking). Tree Inspect does not ask for permission to track you across other companies’ apps and websites on iOS. For more information see <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
+  <h3 id="consent">Your consent to adverts</h3>
+  <p>When the free version starts, before any advert is loaded, Tree Inspect uses Google’s User Messaging Platform (a certified consent management platform) to check whether consent is needed where you are. If you are in the UK, the EEA or Switzerland, or another region where consent is required, a consent message from Google is shown the first time. You can consent to personalised adverts, or choose your options, including refusing. The app only loads adverts when Google’s consent tools say adverts may be requested. If your choices allow only limited or non-personalised adverts, Google serves those instead. If you are offline or the check fails, the app keeps working; adverts are simply not shown until consent can be checked.</p>
+  <p><strong>Changing your choice:</strong> open <em>App options</em> in Tree Inspect and tap <strong>Ad privacy choices</strong> to see the consent message again and change or withdraw your consent at any time. This option appears wherever Google requires it (for example in the UK and EEA). Tree Inspect Pro users do not see the consent message or any adverts.</p>
+  <p><strong>iPhone and iPad:</strong> if adverts may be shown, iOS may also ask whether Tree Inspect can track your activity across other companies’ apps and websites (App Tracking Transparency). If you allow it, Google can use your device’s advertising identifier (IDFA) for advert personalisation and measurement. If you choose “Ask App Not to Track”, the IDFA is not available and you will still see adverts. You can change this at any time in Settings › Privacy &amp; Security › Tracking.</p>
+  <p><strong>Android:</strong> you can reset or delete your Advertising ID, or opt out of ads personalisation, in Settings › Google › Ads (or Settings › Privacy › Ads, depending on your device).</p>
+  <p>For more information see <a href="https://policies.google.com/technologies/partner-sites">How Google uses information from sites or apps that use its services</a>.</p>
 
   <h2>6. Data we do not collect</h2>
   <ul>
@@ -82,7 +91,7 @@
     <tr><td>Storing your projects, photos and settings on your device; exports</td><td>Contract – providing the app you installed</td></tr>
     <tr><td>Camera, photos and GPS</td><td>Consent, given through the device permission and your tap on the control</td></tr>
     <tr><td>Checking purchases and subscription status</td><td>Contract, and legitimate interests in applying paid features fairly</td></tr>
-    <tr><td>Adverts in the free version</td><td>Consent where required by law; otherwise legitimate interests in funding the free version</td></tr>
+    <tr><td>Adverts in the free version</td><td>Consent, collected through Google’s consent message, where required by law (including the UK and EEA); otherwise legitimate interests in funding the free version. iOS tracking only with your App Tracking Transparency permission.</td></tr>
   </table>
   </div>
 
