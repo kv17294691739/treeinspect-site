@@ -10,7 +10,7 @@ No build step, no scripts, no trackers – just plain HTML and one CSS file.
 | `terms.html` | Terms of Use (incl. subscription terms and Apple Standard EULA) |
 | `style.css` | Shared styling |
 
-Live (until a custom domain is added): https://kv17294691739.github.io/treeinspect-site/
+Live at https://movingtree.download/ (custom domain; set in Settings → Pages). Before DNS is set up, https://kv17294691739.github.io/treeinspect-site/ redirects there.
 
 ## 1. Fill in the placeholders
 
@@ -23,7 +23,7 @@ Placeholders are in square brackets and appear on all three pages (footer and co
 | `[Registered office address]` | The company's registered office. This is public on Companies House anyway – use a registered-office / virtual-office service or your accountant's address if you don't want your home address shown. |
 
 Also check:
-- **Contact email** – currently `kv17294691739@gmail.com` (the address in the existing privacy policy). Once you have the domain, a domain address such as `support@yourdomain` looks more professional. Find/replace it on all pages.
+- **Contact email** – currently `kv17294691739@gmail.com` (the address in the existing privacy policy). Once you have the domain, a domain address such as `support@movingtree.download` looks more professional. Find/replace it on all pages.
 - **Store badges** – `index.html` says "App Store – coming soon" / "Google Play – coming soon". Replace with real links when the listings are public.
 - **"Last updated"** dates at the top of `privacy.html` and `terms.html` whenever you change them.
 
@@ -44,7 +44,7 @@ git commit -am "Fill in company details" && git push
 Do these in this order (GitHub recommends adding the domain in GitHub **before** creating DNS records):
 
 1. *(Recommended)* Verify the domain for your account: GitHub → your profile picture → **Settings → Pages → Add a domain**. GitHub shows a TXT record to add at your registrar. This stops anyone else using your domain on GitHub.
-2. In this repo: **Settings → Pages → Custom domain**, type `yourdomain.co.uk`, **Save**. (This creates a `CNAME` file in the repo automatically – don't create it by hand.)
+2. In this repo: **Settings → Pages → Custom domain**, type `movingtree.download` (already done), **Save**. (This creates a `CNAME` file in the repo automatically – don't create it by hand.)
 3. At your domain registrar's DNS settings, delete any default/parking A, AAAA or CNAME records for `@` and `www`, then add:
 
 | Type | Name / Host | Value |
@@ -60,9 +60,9 @@ Do these in this order (GitHub recommends adding the domain in GitHub **before**
 
 4. Wait for DNS (minutes to 24 hours). Back in **Settings → Pages**, tick **Enforce HTTPS** once it becomes available.
 5. Your pages are then:
-   - `https://yourdomain.co.uk/`
-   - `https://yourdomain.co.uk/privacy.html`
-   - `https://yourdomain.co.uk/terms.html`
+   - `https://movingtree.download/`
+   - `https://movingtree.download/privacy.html`
+   - `https://movingtree.download/terms.html`
 
    Use these in App Store Connect (Privacy Policy URL, and the Terms link in the description), Google Play Console (Privacy policy, website) and in the app's paywall links.
 
