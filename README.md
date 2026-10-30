@@ -16,16 +16,8 @@ Live at https://movingtree.download/ (custom domain; set in Settings → Pages).
 
 The pages show **Moving Tree Ltd**, registered office **82A James Carter Road, Mildenhall, IP28 7DE, United Kingdom** (in the footer of all three pages, section 1 and section 15 of `privacy.html`, and the intro and section 14 of `terms.html`).
 
-### Add the company number later
-The company is still being registered, so the number is not shown yet. When Companies House issues it, add ` (company number 12345678)` straight after "a company registered in England and Wales" in these places:
-- the footer of `index.html`, `privacy.html` and `terms.html`
-- section 1 of `privacy.html`
-
-Or on a computer with git:
-```bash
-sed -i 's/a company registered in England and Wales/a company registered in England and Wales (company number 12345678)/g' *.html
-```
-(On a Mac use `sed -i ''`.) Then commit and push. Each page has a comment near the top as a reminder.
+### Company number
+Moving Tree Ltd, company number **17552613** (England and Wales), is shown in every page footer, section 1 of `privacy.html`, and the intro of `terms.html`.
 
 Also check:
 - **Contact email** – currently `kv17294691739@gmail.com`. A domain address such as `support@movingtree.download` looks more professional. Find/replace it on all pages.
