@@ -222,6 +222,19 @@ h1 + .lead, h1 + .meta { margin-top: 0; }
   line-height: 1.3;
 }
 
+a.store {
+  text-decoration: none;
+  color: var(--cream);
+}
+
+a.store:visited { color: var(--cream); }
+
+a.store:hover,
+a.store:focus-visible {
+  background: rgba(244, 243, 234, 0.14);
+  color: #fff;
+}
+
 /* ---------- Cards, lists, buttons ---------- */
 
 .card {
@@ -551,7 +564,7 @@ footer.site p:last-child { margin-bottom: 0; color: #C9D4C4; }
   header.site nav { flex-wrap: nowrap; justify-content: flex-end; }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 480px) {
   header.site nav {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
